@@ -36,8 +36,8 @@ const ItemPage = ({ id, fullUrl, itemTitle, imageUrl }: Props) => {
             <Head>
                 <title>{itemTitle}</title>
                 <meta property="og:title" content={itemTitle}/>
-                {/*<meta property="og:image" content={imageUrl}/>*/}
-                <meta property="og:url" content={fullUrl}/>
+                <meta property="og:image" content={imageUrl}/>
+                {/*<meta property="og:url" content={fullUrl}/>*/}
                 <meta property="og:type" content="website"/>
                 <meta property="og:description" content={`Check out this amazing item: ${id}`}/>
 
