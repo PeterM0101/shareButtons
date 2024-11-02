@@ -28,7 +28,7 @@ const Shared = () => {
             className={`flex justify-center items-center gap-2`}
         >
             <FacebookShareButton
-                url={fullUrl}
+                url={"https://share-buttons-henna.vercel.app/items/2"}
                 quote={'Fuck next-s.'}
                 hashtag={'#nextshare'}
             >
