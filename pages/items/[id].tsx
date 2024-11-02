@@ -3,9 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Shared from "@/components/shared";
 import {GetServerSideProps, GetServerSidePropsContext} from "next";
+import picture from '../../public/lookingForNewJob.png'
 
-const pictureLinkMapping: { [key: string]: string } = {
-    "1": "https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+const pictureLinkMapping: { [key: string]: any } = {
+    "1": picture,
     "2": "https://plus.unsplash.com/premium_photo-1697477565728-d54c716b51d4?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "3": "https://plus.unsplash.com/premium_photo-1697477564565-2a95d76e921a?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 };
