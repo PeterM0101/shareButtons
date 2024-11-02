@@ -75,7 +75,7 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 
     const itemTitle = `Item Page ${id}`;
     const imageUrl = pictureLinkMapping?.[id] ?? pictureLinkMapping["1"];
-    const fullUrl = `https://${context.req.headers.host}/item/${id}`;
+    const fullUrl = `https://${context.req.headers.host}/items/${id}`;
 
     return {
         props: {
