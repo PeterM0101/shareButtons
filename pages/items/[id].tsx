@@ -1,6 +1,4 @@
-// pages/item/[id].tsx
 import React from 'react';
-import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import Shared from "@/components/shared";
@@ -20,16 +18,33 @@ type Props = {
 };
 
 const ItemPage = ({ id, fullUrl, itemTitle, imageUrl }: Props) => {
+    console.log(
+        `Item Page ${id}`,
+        fullUrl,
+        itemTitle,
+        imageUrl)
+
+    const itemPostJsonLd = JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "itemPosting",
+        title: itemTitle,
+        description: "Nice description of the item "+itemTitle,
+    });
 
     return (
         <div className='flex flex-col justify-center items-center h-screen w-screen gap-8'>
             <Head>
                 <title>{itemTitle}</title>
-                <meta property="og:title" content={itemTitle} />
-                <meta property="og:image" content={imageUrl} />
-                <meta property="og:url" content={fullUrl} />
-                <meta property="og:type" content="website" />
-                <meta property="og:description" content={`Check out this amazing item: ${id}`} />
+                <meta property="og:title" content={itemTitle}/>
+                <meta property="og:image" content={imageUrl}/>
+                <meta property="og:url" content={fullUrl}/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:description" content={`Check out this amazing item: ${id}`}/>
+                <script
+                    key="job-post-json-ld"
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{__html: itemPostJsonLd}}
+                ></script>
             </Head>
             <h1 className={'text-5xl font-bold'}>{itemTitle}</h1>
             <div className='relative w-[800px] h-[600px]'>
