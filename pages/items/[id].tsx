@@ -37,9 +37,14 @@ const ItemPage = ({ id, fullUrl, itemTitle, imageUrl }: Props) => {
                 <title>{itemTitle}</title>
                 <meta property="og:title" content={itemTitle}/>
                 {/*<meta property="og:image" content={imageUrl}/>*/}
-                {/*<meta property="og:url" content={fullUrl}/>*/}
+                <meta property="og:url" content={fullUrl}/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:description" content={`Check out this amazing item: ${id}`}/>
+
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:title" content={itemTitle}/>
+                <meta name="twitter:description" content={`Check out this amazing item twitter: ${id}`}/>
+                <meta name="twitter:image" content={imageUrl}/>
                 <script
                     key="job-post-json-ld"
                     type="application/ld+json"
