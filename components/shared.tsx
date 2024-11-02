@@ -14,18 +14,6 @@ interface SharedProps {
 }
 
 const Shared: FC<SharedProps> = ({url}) => {
-    // const router = useRouter();
-    // const [fullUrl, setFullUrl] = useState('');
-    // console.log(
-    //     'fullUrl',
-    //     fullUrl)
-    //
-    // useEffect(() => {
-    //     if (typeof window !== 'undefined') {
-    //         const fullUrl = `${window.location.protocol}//${window.location.host}${router.asPath}`;
-    //         setFullUrl(fullUrl);
-    //     }
-    // }, []);
 
     return (
         <div
