@@ -63,7 +63,7 @@ const ItemPage = ({ id, fullUrl, itemTitle, imageUrl }: Props) => {
                     priority
                 />
             </div>
-            <Shared />
+            <Shared url={fullUrl}/>
         </div>
     );
 };
