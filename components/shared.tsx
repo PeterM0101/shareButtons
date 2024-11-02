@@ -12,13 +12,16 @@ import {useRouter} from "next/router";
 const Shared = () => {
     const router = useRouter();
     const [fullUrl, setFullUrl] = useState('');
+    console.log(
+        'fullUrl',
+        fullUrl)
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const fullUrl = `${window.location.protocol}//${window.location.host}${router.asPath}`;
             setFullUrl(fullUrl);
         }
-    }, []);
+    }, [router.asPath]);
 
     return (
         <div
