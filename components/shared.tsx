@@ -1,4 +1,12 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
+// import {
+//     FacebookIcon,
+//     FacebookShareButton,
+//     LinkedinIcon,
+//     LinkedinShareButton,
+//     TwitterIcon,
+//     TwitterShareButton
+// } from "next-share";
 import {
     FacebookIcon,
     FacebookShareButton,
@@ -6,8 +14,7 @@ import {
     LinkedinShareButton,
     TwitterIcon,
     TwitterShareButton
-} from "next-share";
-import {useRouter} from "next/router";
+} from "react-share";
 
 interface SharedProps {
     url: string;
