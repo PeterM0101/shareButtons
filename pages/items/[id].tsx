@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Head from "next/head";
 import Image from "next/image";
-import Shared from "@/components/shared";
+import Shared from "../../components/shared";
 import {GetServerSideProps, GetServerSidePropsContext} from "next";
 import {useRouter} from "next/router";
 
