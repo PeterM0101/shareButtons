@@ -4,6 +4,7 @@ import Image from "next/image";
 import Shared from "../../components/shared";
 import {GetServerSideProps, GetServerSidePropsContext} from "next";
 import {useRouter} from "next/router";
+import {Button} from "@mui/material";
 
 const pictureLinkMapping: { [key: string]: string } = {
     "1": "https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -62,7 +63,8 @@ const ItemPage = () => {
                 ></script>
             </Head>
             <h1 className={'text-5xl font-bold'}>{itemTitle}</h1>
-            <button className='px-4 py-2 bg-blue-500 text-white rounded-lg' onClick={() => router.back()}>Click</button>
+            <Button id="click-button" variant='contained' >Click</Button>
+            <Button id="push-button" variant='outlined' color='success'>Push</Button>
             <div className='relative w-[800px] h-[600px]'>
                 <Image
                     src={imageUrl}
