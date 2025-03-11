@@ -73,8 +73,9 @@ const ItemPage = () => {
             <h1 className={'text-5xl font-bold'}>{itemTitle}</h1>
             <Button id="click-button" variant='contained' >Click</Button>
             <Button id="push-button" variant='outlined' color='success' onClick={() => {
-                push(["trackEvent", "Button", 'click', "call #111222", 'user #333'])
+                push(["trackEvent", "Call", 'click', "user #111222", '3'])
             }}>Phone</Button>
+            <Button id="push-button" variant='contained' color='success' onClick={() => {push(["trackEvent", "post view 1", 'view', "user #111222", 1])}} >View</Button>
             <div className='relative w-[800px] h-[600px]'>
                 <Image
                     src={imageUrl}
