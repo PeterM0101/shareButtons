@@ -34,6 +34,13 @@ const ItemPage = () => {
             const fullUrl = `${window.location.protocol}//${window.location.host}${router.asPath}`;
             setFullUrl(fullUrl);
         }
+
+        if (typeof window !== "undefined" && typeof window.Matomo !== "undefined") {
+            console.log("Matomo is loaded and ready to use!");
+        } else {
+            console.warn("Matomo is not available.");
+        }
+
     }, []);
 
     const itemPostJsonLd = JSON.stringify({
@@ -66,7 +73,7 @@ const ItemPage = () => {
             <h1 className={'text-5xl font-bold'}>{itemTitle}</h1>
             <Button id="click-button" variant='contained' >Click</Button>
             <Button id="push-button" variant='outlined' color='success' onClick={() => {
-                push(["trackEvent", "contact", 'click', "click phone 1"])
+                push(["trackEvent", "Button", 'click', "call #111222", 'user #333'])
             }}>Phone</Button>
             <div className='relative w-[800px] h-[600px]'>
                 <Image
